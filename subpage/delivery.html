@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Style</title>
+    <link rel="stylesheet"href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-------------------------------- Header ------------------------------------>
+    <div class="header">
+        <div class="row"> 
+                <div class="col-xl-3">
+                    <div class="logo">
+                        <img src="../images/logo.png">
+                    </div>  
+                </div>
+            <div class="col-xl-6">
+                <div class="menu">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../subpage/category.html">NEW ARRIVALS</a></li>
+                    <li><a href="">NỮ</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Áo</a>
+                                <ul>
+                                    <li><a href="../subpage/aothun.html">Áo thun</a></li>
+                                    <li><a href="../subpage/aosomi.html">Áo sơ mi</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Quần</a>
+                                <ul>
+                                    <li><a href="../subpage/quan.html">Quần dài</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Đầm</a>
+                                <ul>
+                                    <li><a href="../subpage/dam.html">Đầm kiểu</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../subpage/gthieu.html">ABOUT</a></li>
+                </div>  
+            </div> 
+            <div class="col-xl-3">
+                <div class="others">
+                    <li><input type="text" placeholder="Tìm kiếm"><i class="fas fa-search"></i></li>
+                    <li><a class="fa fa-paw "href=""></a></li>
+                    <li><a class="fa fa-user "href="javascript:void(0);" id="loginBtn"></a></li>
+                    <li><a class="fa fa-shopping-bag "href="javascript:void(0);" id="cartBtn"></a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------- Delivery ------------------------------------>
+    <section class="delivery">
+        <div class="container">
+            <div class="delivery-top-wrap">
+                <div class="delivery-top">
+                    <div class="delivery-top-delivery delivery-top-item">
+                        <i class="fas fa-shopping-cart "></i>
+                    </div>
+                    <div class="delivery-top-adress delivery-top-item">
+                        <i class="fas fa-map-marker-alt "></i>
+                    </div>
+                    <div class="delivery-top-payment delivery-top-item">
+                        <i class="fas fa-money-check-alt "></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="delivery-content row">
+                <div class="delivery-content-left col-xl-7">
+                    <p>Thông tin giao hàng</p>
+                    <div class="delivery-content-left-input-top row">
+                        <div class="delivery-content-left-input-top-item col-xl-3">
+                            <label>Họ tên<span style="color: red;"> *</span></label>
+                            <input type="text" placeholder="Nhập họ và tên" id="NameInput">
+                            <div class="error-message" id="NameErrorMessage"></div>
+                        </div>
+                        <div class="delivery-content-left-input-top-item col-xl-3">
+                            <label>Số điện thoại<span style="color: red;"> *</span></label>
+                            <input type="text" placeholder="Nhập số điện thoại" id="numInput">
+                            <div class="error-message" id="numErrorMessage"></div>
+                        </div>
+                        <div class="delivery-content-left-input-top-item col-xl-3">
+                            <label>Địa chỉ<span style="color: red;"> *</span></label>
+                            <input type="text" placeholder="Nhập địa chỉ" id="adresseInput">
+                            <div class="error-message" id="adresseErrorMessage"></div>
+                        </div>
+                        <div class="delivery-content-left-input-top-item col-xl-3">
+                            <label>Tỉnh/TP<span style="color: red;"> *</span></label>
+                            <input type="text" placeholder="Nhập địa chỉ" id="tpInput">
+                            <div class="error-message" id="tpErrorMessage"></div>
+                        </div>
+                        <div class="delivery-content-left-input-top-item col-xl-3">
+                            <label>Quận/Huyện<span style="color: red;"> *</span></label>
+                            <input type="text" placeholder="Nhập địa chỉ" id="quanInput">
+                            <div class="error-message" id="quanErrorMessage"></div>
+                        </div>
+                        <div class="delivery-content-left-input-top-item col-xl-3">
+                            <label>Phường/Xã<span style="color: red;"> *</span></label>
+                            <input type="text" placeholder="Nhập địa chỉ" id="xaInput">
+                            <div class="error-message" id="xaErrorMessage"></div>
+                        </div>
+                    </div>
+                    <div class="delivery-content-left-button row">
+                        <div class="delivery-content-left-button-item col-xl-6">
+                            <a href="../subpage/cart.html"><span>&#171;</span><p>Quay lại giỏ hàng </p></a>
+                        </div>
+                        <div class="delivery-content-left-button-item col-xl-6">
+                            <button onclick="validateForm()"><a href="../subpage/payment.html">THANH TOÁN</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-content-right col-xl-5">
+                    <table>
+                        <tr>
+                            <th>Tên sản phẩm</th>
+                            <th>Giảm giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                        <tr>
+                            <td>Áo tay ngắn viền ren cột nơ ASU00540</td>
+                            <td>-</td>
+                            <td>1</td>
+                            <td>229.000₫</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Tổng tiền sản phẩm</td>
+                            <td>229.000₫</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;"colspan="3">Tổng thanh toán</td>
+                            <td>229.000₫</td>
+                        </tr>
+                    </table>
+                    <!-- <div class="delivery-content-right-item">
+                        <button onclick="validateForm()"><a href="../subpage/payment.html">ĐẶT HÀNG</a></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------------------- Footer ------------------------------------>
+    <section class="app-container">
+        <p>Đăng ký nhận tin</p>
+        <span>Để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt và thông tin giảm giá khác</span>
+        <br>
+        <input type="text" placeholder="Nhập email của bạn">
+        <button>ĐĂNG KÝ</button>
+    </section>
+    <div class="footer-top">
+        <li><a href=""><img src="../images/tbao.png" alt=""></a></li>
+        <li><a href="../subpage/tintuc.html">Tin tức</a></li>
+        <li>
+            <a href="" class="fab fa-whatsapp"></a>
+            <a href="" class="fas fa-envelope"></a>
+        </li>
+    </div>
+    <div class="footer-center">
+        <p>
+            Công Ty TNHH Thời Trang An Việt<br>
+            Địa chỉ: 284/5 Lũy Bán Bích, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM<br>
+            SĐT: <span>0898.100.009</span>
+        </p>
+    </div>
+    <div class="footer-bottom">Copyright © Phạm Thị Khánh Vy, DH52112124, D21_TH11</div>
+    <div class="container-fluid footer-item">
+        <a href="#myPage" id="backToTop" title="To Top">
+            <i class='bx bxs-chevron-up-circle'></i>
+        </a>
+    </div>
+    <div class=" container-fluid facebook">
+        <a href="https://www.facebook.com/vmstylevn" class="fab fa-facebook-messenger"></a>
+    </div>
+    <!----------------------------- Giỏ hàng --------------------------->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <span class="cart-close">&times;</span>
+                    <h2>Giỏ hàng</h2>
+                </div>
+                <div id="cartItems" class="col-xl-12">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="col-xl-12 mt-3">
+                    <div class="cart-bottom d-flex justify-content-between align-items-center">
+                        <div class="cart-total">
+                            Tổng tiền: <span id="cartTotal">0₫</span>
+                        </div>
+                        <a href="../subpage/delivery.html"><button id="checkout" class="btn btn-success">Thanh toán</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------- Login ------------------------------------>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+             <div class="row">
+                <div class="col-xl-5">
+                    <div class="modal-left">
+                        <img src="../images/login.png" class="img-reponsive" alt="Login">
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="modal-right">
+                        <div id="loginForm">
+                            <span class="close">&times;</span>
+                            <h1>Đăng Nhập</h1>
+                            <form>
+                                <label for="email"><i class="fas fa-envelope"></i> Email hoặc số điện thoại:</label>
+                                <input type="text" id="email" name="email" required placeholder="Email hoặc số điện thoại">
+                                <label for="password"><i class="fas fa-lock"></i> Mật khẩu:</label>
+                                <input type="password" id="password" name="password" required placeholder="Mật khẩu">
+                                <a href="#">Quên mật khẩu?</a><br>
+                                <button type="submit">Đăng Nhập</button>
+                            </form>
+                            <span>Chưa có tài khoản, vui lòng <a href="#" id="showRegister">Đăng ký</a></span>
+                        </div>
+                        <div id="registerForm" style="display:none;">
+                            <span class="close">&times;</span>
+                            <h1>Đăng ký</h1>
+                            <form>
+                                <label for="registerEmail"><i class="fas fa-envelope"></i> Email:</label>
+                                <input type="text" id="registerEmail" name="registerEmail" required placeholder="Email hoặc số điện thoại">
+                                <label for="registerPassword"><i class="fas fa-lock"></i> Mật khẩu:</label>
+                                <input type="password" id="registerPassword" name="registerPassword" required placeholder="Mật khẩu">
+                                <label for="confirmPassword"><i class="fas fa-lock"></i> Xác nhận mật khẩu:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Xác nhận mật khẩu">
+                                <button type="submit">Đăng Ký</button>
+                            </form>
+                            <span>Đã có tài khoản, vui lòng <a href="#" id="showLogin">Đăng nhập</a></span>
+                        </div>
+                    </div>
+                </div>
+             </div>        
+        </div>
+    </div>
+    <!-- Liên kết với tệp JavaScript -->
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/slider.js"></script>
+</body>
+</html>
